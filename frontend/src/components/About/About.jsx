@@ -1,5 +1,4 @@
 import React from "react";
-import imageAbout from "../../assets/About2.jpeg";
 
 const About = () => {
   return (
@@ -10,7 +9,7 @@ const About = () => {
         {/* الصورة - تميل باتجاه النص */}
         <div className="relative md:w-1/2 w-full flex justify-center items-center perspective">
           <img
-            src={imageAbout}
+            src="https://res.cloudinary.com/danvxvhvq/image/upload/v1762228566/WhatsApp_Image_2025-11-02_at_4.35.11_PM_cjuoxa.jpg"
             alt="About"
             className="w-[95%] h-[450px] object-cover absolute left-[12%] transform rotate-y-6 transition-transform duration-700"
           />

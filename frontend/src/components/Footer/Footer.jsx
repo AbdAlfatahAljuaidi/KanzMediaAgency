@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../assets/logo.png";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"; // ← استيراد الأيقونات
 
 const Footer = () => {
@@ -10,7 +9,7 @@ const Footer = () => {
         {/* قسم الشعار والمعلومات */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={logo} alt="Kanz Media Logo" className="w-12 h-12 rounded-full" />
+            <img src="https://res.cloudinary.com/danvxvhvq/image/upload/v1762228749/Logo_vntafp.png" alt="Kanz Media Logo" className="w-12 h-12 rounded-full" />
             <h2 className="text-xl font-semibold text-white">Kanz Media Agency</h2>
           </div>
           <p className="text-sm leading-relaxed">

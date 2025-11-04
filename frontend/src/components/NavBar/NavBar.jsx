@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Logo from "../../assets/Logo.png";
 import "../../../src/index.css";
 
 const NavBar = () => {
@@ -11,7 +10,7 @@ const NavBar = () => {
         {/* الشعار */}
         <div className="flex items-center space-x-2 group">
           <img
-            src={Logo}
+            src="https://res.cloudinary.com/danvxvhvq/image/upload/v1762228749/Logo_vntafp.png"
             alt="Logo"
             className="h-28 w-28 object-contain transform transition-transform duration-700 group-hover:rotate-[360deg]"
           />

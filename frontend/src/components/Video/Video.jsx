@@ -1,5 +1,4 @@
 import React from 'react'
-import videoMain from '../../assets/Main.mp4'
 
 const Video = () => {
   return (
@@ -7,7 +6,7 @@ const Video = () => {
       <div className=" w-full overflow-hidden shadow-lg">
         <video
           className="w-full h-auto"
-          src={videoMain}
+          src="https://res.cloudinary.com/danvxvhvq/video/upload/v1762228565/main_w7mvpy.mp4"
           
           autoPlay
           muted

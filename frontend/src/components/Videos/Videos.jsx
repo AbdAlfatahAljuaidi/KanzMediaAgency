@@ -1,14 +1,12 @@
 import React from "react";
 
 const videos = [
-  { id: 1, src: "https://www.instagram.com/reel/DM7mC-RKgt8/", title: "Video 1" },
-  { id: 2, src: "https://www.instagram.com/reel/DQROuVkjHgy/", title: "Video 2" },
-  { id: 3, src: "https://www.instagram.com/reel/DN-ddpSDDX1/", title: "Video 3" },
-  { id: 4, src: "https://www.instagram.com/reel/DPQvRNxDJz4/", title: "Video 4" },
-  { id: 5, src: "https://www.instagram.com/p/DOarJFmjP5k/", title: "Video 5" },
-  { id: 6, src: "https://www.instagram.com/reel/DOiiIbFDPWe/", title: "Video 6" },
-  { id: 7, src: "https://www.instagram.com/reel/DQZDTUKDANB/", title: "Video 7" },
-  { id: 8, src: "https://www.instagram.com/reel/DOLU-KODBUU/", title: "Video 8" },
+  { id: 1, src: "https://res.cloudinary.com/danvxvhvq/video/upload/v1762227805/WhatsApp_Video_2025-11-04_at_6.41.05_AM_xrby6d.mp4", title: "Video 1" },
+  { id: 2, src: "https://res.cloudinary.com/danvxvhvq/video/upload/v1762228125/WhatsApp_Video_2025-11-04_at_6.40.35_AM_bdumhi.mp4", title: "Video 2" },
+  { id: 3, src: "https://res.cloudinary.com/danvxvhvq/video/upload/v1762228180/WhatsApp_Video_2025-11-04_at_6.40.26_AM_vsiz7r.mp4", title: "Video 3" },
+  { id: 4, src: "https://res.cloudinary.com/danvxvhvq/video/upload/v1762228280/WhatsApp_Video_2025-11-04_at_6.40.01_AM_kojfs3.mp4", title: "Video 4" },
+  { id: 5, src: "https://res.cloudinary.com/danvxvhvq/video/upload/v1762228385/WhatsApp_Video_2025-11-04_at_6.39.04_AM_t4n01n.mp4", title: "Video 5" },
+  { id: 6, src: "https://res.cloudinary.com/danvxvhvq/video/upload/v1762228400/WhatsApp_Video_2025-11-04_at_6.38.52_AM_caghbg.mp4", title: "Video 6" },
 ];
 
 const Videos = () => {
@@ -20,24 +18,19 @@ const Videos = () => {
       </div>
 
       <div className="flex space-x-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
-        {videos.map((video) => {
-          const embedUrl = `${video.src}embed`; // نضيف كلمة embed على نهاية الرابط
-
-          return (
-            <div
-              key={video.id}
-              className="flex-shrink-0 w-80 rounded-lg shadow-md overflow-hidden bg-white"
-            >
-              <iframe
-                src={embedUrl}
-                className="w-full h-96 rounded-lg"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen
-                title={video.title}
-              ></iframe>
-            </div>
-          );
-        })}
+        {videos.map((video) => (
+          <div
+            key={video.id}
+            className="flex-shrink-0 w-80 rounded-lg shadow-md overflow-hidden bg-white"
+          >
+            <video
+              src={video.src}
+              controls
+              className="w-full h-96 rounded-lg object-cover"
+              title={video.title}
+            />
+          </div>
+        ))}
       </div>
     </section>
   );
